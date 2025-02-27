@@ -1,0 +1,24 @@
+/**Atividade :  Escreva um programa que leia um vetor de 15 posições de inteiros. Em seguida, o 
+*programa deve ler um valor inteiro e imprimir o número de vezes que este valor ocorre 
+*/no vetor. 
+#include <stdio.h>
+#define Tam 15
+
+int main(){
+	
+	int c = 0; int tot = 0; int procurar = 0;
+	int vetor[Tam];
+	
+	for (c = 0; c < Tam; c++) {
+		printf("Digite um número");
+		scanf("%d", &vetor[c]);
+	}
+	printf("Digite o valor a ser procurado: ");
+	scanf("%d", &procurar);
+	for(c = 0; c < Tam; c++) {
+		if(procurar == vetor[c]) {
+			tot++;
+		}
+	}
+	printf("O número %d apareceu no total de %d ", procurar, tot);
+}
